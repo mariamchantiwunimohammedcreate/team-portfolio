@@ -1,0 +1,133 @@
+:root {
+  --black-bg: #0f0f2e;
+  --neon-pink: #ff6ec4;
+  --neon-blue: #2f80ed;
+  --neon-purple: #9b51e0;
+  --white-trans: rgba(255,255,255,0.8);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--black-bg);
+    margin: 0;
+    padding: 20px;
+    
+}
+.back-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(45deg,#9b51e0,#2f80ed);
+    box-shadow: 0 0 15px #9b51e0;
+    transition: 0.3s;
+}
+.back-link:hover {
+    transform: scale(1.05);
+  box-shadow: 0 0 25px #ff6ec4;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+.team-container h1 {
+    margin-bottom: 40px; 
+    color: var(--white-trans);
+    font-size: 3rem;
+}
+.team-container p{
+    color: var(--white-trans);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 15px;
+}
+.team-grid {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 10px;
+    
+}
+
+.team-card {
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0px 18px #42e695;
+    transition: transform 0.3s;
+    
+    
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0px 30px #ff6ec4;
+
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit:cover;
+    margin-bottom: 15px;
+    
+}
+
+.role {
+    color: var(--white-trans);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.team-card h3 {
+    color: var(--white-trans);
+}
+
+.view-profile {
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(45deg,#9b51e0,#2f80ed);
+  box-shadow: 0 0 15px #9b51e0;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.view-profile:hover {
+    transform: scale(1.05);
+  box-shadow: 0 0 25px #ff6ec4;
+}
+
+.social-link{
+    width: 80px;
+    cursor: pointer;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    transition: transform 0.2s;
+     border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(70, 5, 59, 0.1);
+    
+}
+  .social-link:hover {
+    transform: translateY(-10px);
+    
+}
+  
+  
+
+
+
