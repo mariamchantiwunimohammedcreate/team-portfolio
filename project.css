@@ -1,0 +1,597 @@
+:root {
+  --black-bg: #0f0f2e;
+  --neon-pink: #ff6ec4;
+  --neon-blue: #2f80ed;
+  --neon-purple: #9b51e0;
+  --white-trans: rgba(255,255,255,0.8);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: var(--black-bg);
+    min-height: 100vh;
+    padding: 13px;
+}
+
+.project-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.back-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: linear-gradient(45deg,#9b51e0,#2f80ed);
+    box-shadow: 0 0 15px #9b51e0;
+    transition: 0.3s;
+    margin-top: -10px;
+    display: inline-block;
+
+}
+.back-link:hover {
+    transform: scale(1.05);
+  box-shadow: 0 0 25px #ff6ec4;
+}
+
+
+/* Header */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background: var(--black-bg);
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.project-header h1 {
+    font-size: 32px;
+    color:var(--white-trans);
+    font-weight: 600;
+}
+
+.btn-add-project {
+    background:linear-gradient(45deg,#42e695,#ff6ec4);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-add-project:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+.btn-add-project:active {
+    transform: translateY(0);
+}
+
+/* Search Bar */
+.search-section {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid  #9b51e0;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-bar:focus {
+    border-color:  #9b51e0;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--black-bg);
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px var(--neon-purple);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px  #9b51e0;
+}
+
+.project-card-header {
+    background:  linear-gradient(45deg,#9b51e0,#2f80ed);
+    color: white;
+    padding: 20px;
+}
+
+.project-card-header h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.project-card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-description {
+    color: var(--white-trans);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Technologies */
+.project-technologies {
+    margin-bottom: 15px;
+}
+
+.project-technologies label {
+    display: block;
+    font-weight: 600;
+    color: var(--white-trans);
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: linear-gradient(45deg,#42e695,#ff6ec4);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Team Members */
+.project-team {
+    margin-bottom: 15px;
+}
+
+.project-team label {
+    display: block;
+    font-weight: 600;
+    color: var(--white-trans);
+    font-size: 12px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.team-member {
+    background: linear-gradient(45deg,#42e695,#ff6ec4);
+    color: var(--white-trans);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* Links */
+.project-links {
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-link {
+    flex: 1;
+    min-width: 100px;
+}
+
+.project-link a {
+    display: inline-block;
+    background: #f0f0f0;
+    color: #1976d2;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    transition: background 0.3s;
+    word-break: break-word;
+}
+
+.project-link a:hover {
+    background: #e0e0e0;
+    text-decoration: underline;
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Delete Button - MAIN STYLING */
+.btn-delete {
+    flex: 1;
+    background: linear-gradient(45deg,#42e695,#ff6ec4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-delete:hover {
+    background: #ff1744;
+    transform: scale(1.05);
+}
+
+.btn-delete:active {
+    transform: scale(0.95);
+}
+
+.btn-delete::before {
+    content: "🗑️";
+    font-size: 16px;
+}
+
+/* Edit Button */
+.btn-edit {
+    flex: 1;
+    background: linear-gradient(45deg,#42e695,#ff6ec4);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.btn-edit:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+.btn-edit::before {
+    content: "✏️";
+    font-size: 16px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+    font-size: 18px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.empty-state.show {
+    display: block;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color:red;
+}
+
+.modal-content h2 {
+    color: var(--white-trans);
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--white-trans);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 5px rgba(25, 118, 210, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn-submit {
+    flex: 1;
+    background: var(--neon-blue);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+    background: #1565c0;
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    flex: 1;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-cancel:hover {
+    background: #e0e0e0;
+}
+
+/* Delete Modal Styles */
+.delete-modal {
+    max-width: 400px;
+    text-align: center;
+}
+
+.delete-modal h2 {
+    color: #ff5252;
+    margin-bottom: 15px;
+}
+
+.delete-modal p {
+    color: var(--white-trans);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.delete-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-delete-confirm {
+    flex: 1;
+    background: #ff5252;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-delete-confirm:hover {
+    background: #ff1744;
+    transform: scale(1.05);
+}
+
+.btn-delete-cancel {
+    flex: 1;
+    background: #f5f5f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-delete-cancel:hover {
+    background: #e0e0e0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .portfolio-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .portfolio-header h1 {
+        font-size: 24px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 18px;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .btn-edit,
+    .btn-delete {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .portfolio-header {
+        padding: 15px;
+    }
+
+    .portfolio-header h1 {
+        font-size: 20px;
+    }
+
+    .btn-add-project {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .project-card-header h3 {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
