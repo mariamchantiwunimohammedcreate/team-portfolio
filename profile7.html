@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <style>
+       :root {
+           --black-bg: #0f0f2e;
+           --neon-pink: #ff6ec4;
+           --neon-blue: #2f80ed;
+           --neon-purple: #9b51e0;
+           --white-trans: rgba(255,255,255,0.8);
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background:#0f0f2e;
+            padding: 0;
+        }
+        .back-btn{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: transparent;
+            color: var(--white-trans);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 60px;
+            font-weight: 700;
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            z-index: 999;
+
+
+        }
+        .back-btn:hover{
+         background: transparent;
+            border-color: #fff;
+            transform: scale(1.1);
+        }
+
+        .profile-container {
+            max-width: 100%;
+            margin: auto;
+            background: transparent;
+            border-radius: 10px;
+            overflow: visible;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+
+        .profile-header {
+            background: var(--black-bg);
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            position: relative;
+            overflow: visible;
+            min-height: 340px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+        }
+        .profile-header::before{
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 20px;
+            width: 380px;
+            height: 380px;
+            background: linear-gradient(145deg,#9b51e0,#2f80ed);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .profile-header::after{
+            content: '';
+            position: absolute;
+            left: 160px;
+            bottom: -100px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .profile-header img {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            left: -30px;
+            top:20px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 5px solid #fff;
+            display: block;
+            filter: drop-shadow(0 20px 40px rgbaa(0, 0, 0, 0.3));
+            z-index: 0;
+            flex-shrink: 0;
+        }
+        .profile-header > div{
+            z-index: 1;
+            margin-left: 0;
+        }
+
+        .profile-header h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .profile-header p {
+            font-size: 18px;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        .profile-body {
+            padding: 40px;
+            position: relative;
+            z-index: 3;
+            color: #ffff;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: var(--white-trans);
+            margin-bottom: 12px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 6px;
+            font-size: 2em;
+        }
+
+        .section p {
+            line-height: 1.7;
+            color: var(--white-trans);
+            font-size: 1.5em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill {
+            background: linear-gradient(45deg,#9b51e0,#2f80ed);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .contact-info a {
+            display: inline-block;
+            margin-right: 15px;
+            background: linear-gradient(45deg,#9b51e0,#2f80ed);
+            color: var(--white-trans);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 8px 14px;
+        }
+
+        .contact-info a:hover {
+            transform: scale(1.05);
+  box-shadow: 0 0 25px #ff6ec4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #fafafa;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <a href="team.html" class="back-btn">&#8592;</a>
+
+    <div class="profile-container">
+
+        <!-- Header -->
+        <div class="profile-header">
+            <img src="images/chenty2.jpg" alt="Profile Picture">
+            <div>
+                <h1>Mohammed Mariam Chantiwuni</h1>
+                <p>Frontend Developer And An Aspiring ML & AI Engineer</p>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="profile-body">
+
+            <!-- About -->
+            <div class="section">
+                <h2>About Me</h2>
+                <p>
+                    Aspiring Machine Learning and AI Engineer driven by curiosity and innovation.
+                     I am passionate about using data and intelligent systems to solve real-world problems and improve lives.
+                    Currently building my foundation in programming, algorithms, and data structures, while working on practical projects to strengthen my technical skills.
+                    I am committed to continuous learning and growth in the field of Artificial intelligence
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="section">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill"> Basic JavaScript</span>
+                    <span class="skill">UI Design</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">Teamwork</span>
+                </div>
+            </div>
+
+            <!-- Projects / Role -->
+            <div class="section">
+                <h2>Role in the Team</h2>
+                <p>
+                    Responsible for designing and developing UI/UX designs
+                    and ensuring consistency across the team website.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="section contact-info">
+                <h2>Contact</h2>
+                <a href="mailto:mariamchantiwunimohammed@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/mariam-chantiwuni-mohammed-157a1629a?">LinkedIn</a>
+                <a href="https://github.com/mariamchantiwunimohammedcreate">GitHub</a>
+            </div>
+
+        </div>
+
+        <footer>
+            ©️ 2026 Ladies Team | Profile Page
+        </footer>
+
+    </div>
+
+</body>
+</html>
